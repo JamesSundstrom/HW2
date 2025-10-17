@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="src/assets/tree.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tree Game</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div><script type="module" src="/src/main.jsx"></script></div>
+    <div>
+      <p>
+        <b>Instructions:</b> In the Tree Game, there are two players: a
+        firefighter and a pyromaniac. The two of them walk together around a
+        circular path lined with trees, some of which are on fire. The
+        firefighter's goal is to put out all the fires, while the pyromaniac's
+        goal is to prevent the firefighter from doing that.
+      </p>
+      <p>
+        The above game allows you to play the Tree Game as a two-player game,
+        as a one-player game against the computer, or in demonstration mode 
+        (watching two computer players). When you start a new game, a random 
+        starting position is generated.
+      </p>
+      <p><b>Settings:</b> The Settings menu allows you to adjust several settings:</p>
+      <ul>
+        <li><b>Min/Max Trees</b>: How many trees are there in a game? (The minimum
+        must be at least three, and the maximum must be at most 12.)</li>
+        <li><b>Threefold repetition</b>: In the baseline version of the game, there is 
+          no way for the pyromaniac to win, other than the firefighter giving up. 
+          If this setting is changed to "Yes," then the pyromaniac wins if the game is 
+          in the same position three times. (Note that two positions count as the
+          same if one is a rotation of the other.)
+        </li>
+        <li><b>Difficulty</b>: Computer player difficulty: 0 is random play, and 10
+        is perfect play. (The only exception is that on any difficulty level, a 
+        computer-controlled firefighter will take a trivial win if available, i.e.,
+        if the firefighter can win before the pyromaniac gets another turn.)</li>
+      </ul>
+    </div>
+  </body>
+</html>

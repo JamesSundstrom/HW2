@@ -65,7 +65,7 @@ export default function GameBoard({ tg, toMenu }) {
   );
   return (
     <center className="board">
-      {[...trees, path, locationMarker, menuBtn]}
+      {[path, locationMarker, menuBtn]}
     </center>
   );
 }

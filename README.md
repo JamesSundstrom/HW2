@@ -16,10 +16,12 @@ From the main menu, you can also choose to go to the Settings menu, which lets y
 
 ## Credits
 
-The idea of the game has been around for a while. The particular description in terms of a firefighter and a pyromaniac is from the [https://cims.nyu.edu/~tjl8195/CMUMC_POTD_Book.pdf](Carnegie Mellon University Math Club Problem of the Day) (Problem 15).
+The idea of the game has been around for a while. The particular description in terms of a firefighter and a pyromaniac is from the [Carnegie Mellon University Math Club Problem of the Day](https://cims.nyu.edu/~tjl8195/CMUMC_POTD_Book.pdf) (Problem 15).
 
 The fire image used in the game is from [http://www.clker.com/clipart-414743.html](http://www.clker.com/clipart-414743.html).
 
 The tree image used in the game is from [http://www.publicdomainfiles.com/show_file.php?id=13925582418820](http://www.publicdomainfiles.com/show_file.php?id=13925582418820).
+
 The firefighter helmet image used in the game is from [https://creazilla.com/media/clipart/67571/firefighter-hat](https://creazilla.com/media/clipart/67571/firefighter-hat).
+
 The torch image used in the game is from [https://www.pngwing.com/en/free-png-bucho](https://www.pngwing.com/en/free-png-bucho).

@@ -1,6 +1,6 @@
 import { Status, FF_NAME, PYRO_NAME } from "./tree-game.tsx";
 
-const PREFIX = "./assets/"
+const PREFIX = "/HW2/"
 
 const TREE_IMG = PREFIX + "tree.png";
 const FIRE_IMG = PREFIX + "fire.png";

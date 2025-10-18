@@ -4,7 +4,7 @@ In this game, a firefighter and a pyromaniac walk around a circular path lined w
 
 ## Instructions
 
-The game can be played at [http://jamessundstrom.github.io/HW2](jamessundstrom.github.io/HW2).
+The game can be played at [jamessundstrom.github.io/HW2](http://jamessundstrom.github.io/HW2).
 
 When you open the game, you'll see a main menu which lets you launch a game of your preference. You can choose a 2-player game, a 1-player game against the computer (controlling either the firefighter or the pyromaniac), or demonstration mode (in which the computer controls both characters). When you launch the game, a random starting position will be generated.
 

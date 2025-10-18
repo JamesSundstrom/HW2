@@ -7,12 +7,12 @@ import GameHeader from "./game-header.jsx";
  * The main game screen for a TreeGame with given <gameType>, <n> trees,
  * and difficulty <diff>.
  */
-export default function GameScreen({ toMenu, gameType, n, winnablePyro, diff }) {
+export default function GameScreen({ toMenu, gameType, n, pyroWinnable, diff }) {
 /*   const statusList = [Status.TREE, Status.TREE, Status.FIRE, Status.FIRE, Status.TREE]; // testing
   //const statusList = [Status.FIRE, Status.FIRE, Status.TREE, Status.TREE, Status.FIRE]; // testing
   const testTg = new TreeGame(statusList, winnablePyro, gameType, diff); // testing
   const [tg, setTg] = useState(testTg); // testing  */
-  const [tg, setTg] = useState(TreeGame.random(n, winnablePyro, gameType, diff));
+  const [tg, setTg] = useState(TreeGame.random(n, pyroWinnable, gameType, diff));
 
   // If it's the computer's turn, pause 0.75 seconds, then take turn
   useLayoutEffect(() => {

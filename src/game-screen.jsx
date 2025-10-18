@@ -10,7 +10,7 @@ import GameHeader from "./game-header.jsx";
 export default function GameScreen({ toMenu, gameType, n, pyroWinnable, diff }) {
 /*   const statusList = [Status.TREE, Status.TREE, Status.FIRE, Status.FIRE, Status.TREE]; // testing
   //const statusList = [Status.FIRE, Status.FIRE, Status.TREE, Status.TREE, Status.FIRE]; // testing
-  const testTg = new TreeGame(statusList, winnablePyro, gameType, diff); // testing
+  const testTg = new TreeGame(statusList, pyroWinnable, gameType, diff); // testing
   const [tg, setTg] = useState(testTg); // testing  */
   const [tg, setTg] = useState(TreeGame.random(n, pyroWinnable, gameType, diff));
 

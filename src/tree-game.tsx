@@ -75,7 +75,7 @@ export const PYRO_NAME = "Pyromaniac";
 /** A class representing the Tree Game. */
 export class TreeGame {
   trees: Array<Status>;
-  winnablePyro: boolean;
+  pyroWinnable: boolean;
   location: number;
   winner: string | null;
   pastPositions: Map<string, number>;
@@ -84,11 +84,11 @@ export class TreeGame {
   difficulty: number;
 
   constructor(statusList: Array<Status>, 
-      winnablePyro: boolean = false, 
+      pyroWinnable: boolean = false, 
       gameType: GameType = GameType.TWO_PLAYER, 
       difficulty: number = 10) {
     this.trees = statusList.slice();
-    this.winnablePyro = winnablePyro;
+    this.pyroWinnable = pyroWinnable;
     this.location = 0;
     this.winner = null;
     this.pastPositions = new Map([[this.position(), 1]]);
@@ -100,7 +100,7 @@ export class TreeGame {
 
   /**
    * Return a random non-trivial (as defined by the isTrivial() method)
-   * TreeGame with n trees, using the specified settings for winnablePyro
+   * TreeGame with n trees, using the specified settings for pyroWinnable
    * (whether the Pyro can win by threefold repetition), gameType (which
    * characters are human-controlled), and difficulty (how well the
    * computer-controlled character plays, if there is at least one).
@@ -108,7 +108,7 @@ export class TreeGame {
    * If n < 3, then drop the non-triviality requirement, as every game
    * is essentially trivial.
    */
-  static random(n: number, winnablePyro: boolean, gameType: GameType, difficulty: number = 10) {
+  static random(n: number, pyroWinnable: boolean, gameType: GameType, difficulty: number = 10) {
     if (n <= 0) {
       throw "Non-positive number of trees provided";
     }
@@ -118,7 +118,7 @@ export class TreeGame {
         const rand = [Status.TREE, Status.FIRE][Math.floor(Math.random() * 2)];
         statusList.push(rand);
       }
-      let tg = new TreeGame(statusList, winnablePyro, gameType, difficulty);
+      let tg = new TreeGame(statusList, pyroWinnable, gameType, difficulty);
       if (n < 3 || !tg.isTrivial()) {
         return tg;
       }
@@ -161,7 +161,7 @@ export class TreeGame {
     if (this.winner != null) {return;}
     if (this.isFfWin()) {
       this.winner = FF_NAME;
-    } else if (this.winnablePyro) { // only track positions if needed
+    } else if (this.pyroWinnable) { // only track positions if needed
       const pos = this.position();
       if (this.pastPositions.has(pos)) {
         this.pastPositions.set(pos, this.pastPositions.get(pos) + 1);
@@ -214,7 +214,7 @@ export class TreeGame {
    * pyromaniac has already won the game previously.
    */
   isPyroWin() {
-    return this.winnablePyro && this.pastPositions.get(this.position()) >= 3;
+    return this.pyroWinnable && this.pastPositions.get(this.position()) >= 3;
   }
 
   /** Pre-calculate optimal strategy for game, by storing positions in

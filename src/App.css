@@ -84,7 +84,7 @@ body {
 
 #mainmenu {
   position: absolute;
-  width: 25%;
+  width: 20%;
   top: 100%;
   left: 100%;
   transform: translate(-100%, -100%);

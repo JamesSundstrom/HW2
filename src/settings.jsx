@@ -21,7 +21,6 @@ export default function Settings({
   function saveAndReturn() {
     const newMin = parseInt(minRef.current.value);
     const newMax = parseInt(maxRef.current.value);
-    const repetitionQuery = "input[name=winbyrepetition]:checked";
     if (
       Number.isNaN(newMin) || Number.isNaN(newMax) ||
       newMin < hardMinTrees || newMin > newMax ||
